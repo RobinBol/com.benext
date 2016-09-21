@@ -1,0 +1,102 @@
+{
+	"id": "com.benext",
+	"name": {
+		"en": "BeNext",
+		"nl": "BeNext"
+	},
+	"version": "0.0.4",
+	"compatibility": ">=0.9.2",
+	"author": {
+	},
+	"contributors": {
+		"developers": [
+		]
+	},
+	"category": [
+		"appliances"
+	],
+	"description": {
+		"en": "Drivers for BeNext devices",
+		"nl": "Drivers voor BeNext apparaten"
+	},
+	"images": {
+		"large": "/assets/images/large.jpg",
+		"small": "/assets/images/small.jpg"
+	},
+	"drivers": [
+		{
+			"id": "p1-dongle",
+			"name": {
+				"en": "BeNext P1 Dongle",
+				"nl": "BeNext P1 Dongle"
+			},
+			"icon": "/drivers/p1-dongle/assets/icon.svg",
+			"images": {
+				"large": "/drivers/p1-dongle/assets/images/large.jpg",
+				"small": "/drivers/p1-dongle/assets/images/small.jpg"
+			},
+			"class": "sensor",
+			"capabilities": [
+				"measure_power",
+				"meter_power",
+				"meter_gas"
+			],
+			"images": {
+				"large": "/drivers/p1-dongle/assets/images/large.jpg",
+				"small": "/drivers/p1-dongle/assets/images/small.jpg"
+			},
+			"zwave": {
+				"manufacturerId": 138,
+			    "productTypeId": 47,
+			    "productId": 256,
+				"learnmode": {
+					"image": "/drivers/p1-dongle/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the small button on your BeNext P1 Dongle",
+						"nl": "Druk op de kleine knop op de BeNext P1 Dongle"
+					}
+				},
+				"associationGroups": [
+					1
+				],
+				"multiChannelNodes": {
+					"1": {
+						"class": "sensor",
+						"capabilities": [
+							"measure_power"
+						],
+						"icon": "/drivers/p1-dongle/assets/icon-1.svg",
+						"name": {
+							"en": "Current power use",
+							"nl": "Huidig stroom verbruik"
+						}
+					},
+					"2": {
+						"class": "sensor",
+						"capabilities": [
+							"meter_power"
+						],
+						"icon": "/drivers/p1-dongle/assets/icon-2.svg",
+						"name": {
+							"en": "Total power use",
+							"nl": "Totaal stroom verbruik"
+						}
+					},
+					"3": {
+						"class": "sensor",
+						"capabilities": [
+							"meter_gas"
+						],
+						"icon": "/drivers/p1-dongle/assets/icon-3.svg",
+						"name": {
+							"en": "Gas consumption",
+							"nl": "Gasverbruik"
+						}
+					}
+				}
+			},
+			"settings": [
+			]
+		}
+	]
+}
